@@ -3,12 +3,13 @@
 
 ## installation
 ```bash
-npm install -S afeiship/next-filter
+npm install -S @feizheng/next-filter
 ```
 
 ## usage
 ```js
-import 'next-filter';
+import nx from '@feizheng/next-js-core2';
+import '@feizheng/next-filter';
 
 // single filter
 const res1 = nx.filter('aaa', [addMore(111, 999)]);                 

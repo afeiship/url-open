@@ -3,7 +3,7 @@
  * description: Filter for next.
  * homepage: https://github.com/afeiship/next-filter
  * version: 1.0.0
- * date: 2020-11-22 17:34:00
+ * date: 2020-11-22 17:45:49
  * license: MIT
  */
 

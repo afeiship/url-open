@@ -1,21 +1,27 @@
-(function() {
+(function () {
   'use strict';
 
   const gulp = require('gulp');
-  const saveLicense = require('uglify-save-license');
   const $ = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*', 'del', '@jswork/gulp-*']
   });
+  const tsconfig = require('../tsconfig.json');
 
-  gulp.task('scripts', function() {
+  gulp.task('scripts:cjs', function () {
     return gulp
-      .src('src/*.js')
+      .src('src/index.ts')
       .pipe($.jswork.pkgHeader())
-      .pipe(gulp.dest('dist'))
-      .pipe($.size({ title: '[ default size ]:' }))
-      .pipe($.uglify({ output: { comments: saveLicense } }))
-      .pipe($.rename({ extname: '.min.js' }))
-      .pipe(gulp.dest('dist'))
+      .pipe($.typescript({ ...tsconfig.compilerOptions, module: 'commonjs' }))
+      .pipe(gulp.dest('dist/cjs'))
+      .pipe($.size({ title: '[ minimize size ]:' }));
+  });
+
+  gulp.task('scripts:esm', function () {
+    return gulp
+      .src('src/index.ts')
+      .pipe($.jswork.pkgHeader())
+      .pipe($.typescript({ ...tsconfig.compilerOptions, module: 'esnext' }))
+      .pipe(gulp.dest('dist/esm'))
       .pipe($.size({ title: '[ minimize size ]:' }));
   });
 })();

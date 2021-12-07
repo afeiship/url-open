@@ -43,5 +43,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/afeiship/url-open.git"
-  }
+  },
+  "keywords": [
+    "anchor",
+    "url",
+    "open",
+    "link"
+  ]
 }

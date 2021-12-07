@@ -38,7 +38,6 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "boilerplate": "url-open",
   "homepage": "https://js.work",
   "repository": {
     "type": "git",

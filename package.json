@@ -1,6 +1,6 @@
 {
   "name": "@jswork/url-open",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Url open use anchor tag.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

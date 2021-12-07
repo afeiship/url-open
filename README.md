@@ -15,7 +15,7 @@ npm install @jswork/url-open
 ```js
 import urlOpen from '@jswork/url-open';
 
-// usage goes here.
+urlOpen('https://www.baidu.com', { target: '_self'});
 ```
 
 ## license
